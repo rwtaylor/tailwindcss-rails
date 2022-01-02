@@ -1,5 +1,5 @@
 require 'shellwords'
-TAILWIND_COMPILE_COMMAND = "#{Pathname.new(__dir__).to_s.shellescape}/../../exe/tailwindcss -i #{Rails.root.join("app/assets/stylesheets/application.tailwind.css").shellescape} -o #{Rails.root.join("app/assets/builds/tailwind.css").shellescape} -c #{Rails.root.join("config/tailwind.config.js").shellescape}"
+TAILWIND_COMPILE_COMMAND = "#{Pathname.new(__dir__).to_s.shellescape}/../../exe/tailwindcss -i #{Rails.root.join("app/assets/stylesheets/application.tailwind.css").to_s.shellescape} -o #{Rails.root.join("app/assets/builds/tailwind.css").to_s.shellescape} -c #{Rails.root.join("config/tailwind.config.js").to_s.shellescape}"
 
 namespace :tailwindcss do
   desc "Build your Tailwind CSS"
